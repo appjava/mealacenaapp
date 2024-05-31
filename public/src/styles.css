@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    width: 95%;
+    border: 1px none yellow;
+    margin: 30px auto;
+}
+.alacena{
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+    gap: 30px;
+    justify-content:center;
+    border: 1px none red;
+    margin: 30px auto;
+}
+.producto{
+    width: 180px;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 12px;
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.producto img{
+    width: 90%;
+    margin: 3px auto;
+    object-fit:fill;
+}
+.inventario{
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    border: 1px none red;
+    height: 24px;
+    border-radius: 0px 0px 12px 12px;
+    
+}
+.actual{
+    display: flex;
+    width: 100%;
+    background-color: none;
+    border-top: 1px solid gray;
+    border-radius: 0px 0px 0px 12px;
+    justify-content:space-between;
+    padding-top: 0px;
+}
+.meta{
+    display: flex;
+    background-color: gray;
+    color: white;
+    border-radius: 0px 0px 12px 12px;
+    justify-content:space-around;
+    padding-top: 3px;
+    
+}
+#nombre{
+    text-transform: uppercase;
+}
+#unidad{
+    color: white;
+}
+#incremento{
+    background-color: green;
+    width: 25%;
+    padding-top: 3px;
+    color: white;
+    cursor: pointer;
+}
+#cantidad{
+    padding-top: 3px;
+}
+#decremento{
+    background-color: red;
+    padding-top: 3px;
+    width: 25%;
+    color: white;
+    cursor: pointer;
+}
+    @media (max-width: 900px) {
+        .alacena{
+            grid-template-columns: repeat(2, 240px);
+        }
+    }
+    @media (max-width: 600px) {
+        .alacena{
+            grid-template-columns: repeat(1, 240px);
+        }
+    }

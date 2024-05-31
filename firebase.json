@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "alacena",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
