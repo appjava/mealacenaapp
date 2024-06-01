@@ -8,6 +8,11 @@ body{
     border: 1px none yellow;
     margin: 30px auto;
 }
+hr{
+    width: 80%;
+    margin: 30px auto;
+
+}
 .alacena{
     display: grid;
     grid-template-columns: repeat(3, 240px);

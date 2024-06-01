@@ -65,12 +65,13 @@ let catC = [
 catA.forEach((producto) => {
   shopItemsData.push(producto);
 });
+/*
 catB.forEach((producto) => {
   shopItemsData.push(producto);
 });
 catC.forEach((producto) => {
   shopItemsData.push(producto);
 });
-
+*/
 
 

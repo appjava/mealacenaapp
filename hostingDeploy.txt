@@ -1,0 +1,31 @@
+Instala Firebase CLI
+	> npm install -g firebase-tools
+	
+Inicializa el proyecto
+	Acceder a Google
+	> firebase login
+	Inicia el proyecto
+	> firebase init
+
+Implementa en Firebase Hosting
+	> firebase deploy
+	
+	>> firebase projects:list
+ 
+"site": "plantazula",
+	> firebase deploy --only hosting:plantazula
+"site": "claustore",
+	> firebase deploy --only hosting:claustore
+
+"site": "echo-group",
+	> firebase deploy --only hosting:echo-group
+"site": "ingjava",
+	> firebase deploy --only hosting:ingjava --project echo-group
+	
+"site": "echoprojects3d",
+	> firebase deploy --only hosting:echoprojects3d
+"site": "alacena",
+	> firebase deploy --only hosting:alacena --project echoprojects3d
+
+
+<site>.web.app
