@@ -1,89 +1,32 @@
 
 let shopItemsData = [];
-//Cuidado Personal
-let nameCatA = "Armonía y Bienestar";
+//Base
+let nameCatA = "Grano Básico";
 let catA = [
   {
     id: "a1",
-    name: "Crema y Splash Victoria's Secret",
-    price: 45000,
-    desc: "Crema Victoria's Secret 200ml + Splash Victoria's Secret 250ml",
-    img: "images/productos/catA/a1/cover.png",
-    img1: "images/productos/catA/a1/a1.jpg",
-    img2: "images/productos/catA/a1/a2.jpg",
-    img3: "images/productos/catA/a1/a3.jpg",
+    nombre: "Cafe",
+    cantidad: 4,
+    unidad: "Lb",
+    img: "https://stockimages.tiendasd1.com/stockimages.tiendasd1.com/kobastockimages/IMAGENES/12000184.png",
   },
   {
     id: "a2",
-    name: "Splash + Crema + Cosmetiquera",
-    price: 50000,
-    desc: "Crema Victoria's Secret 200ml + Splash Victoria's Secret 250ml + Cosmetiquera",
-    img: "images/productos/catA/a2/cover.png",
-    img1: "images/productos/catA/a2/a1.jpg",
-    img2: "images/productos/catA/a2/a2.jpg",
-    img3: "images/productos/catA/a2/a3.jpg",
+    nombre: "Aceite",
+    cantidad: 4,
+    unidad: "Lt",
+    img: "https://stockimages.tiendasd1.com/stockimages.tiendasd1.com/kobastockimages/IMAGENES/12004357.png",
   },
   {
     id: "a3",
-    name: "Mini Splash, Crema, Splash, Cosmetiquera",
-    price: 65000,
-    desc: "Crema 250ml + Splash 250ml + Mini splash 30ml+ Cosmetiquera Plástica",
-    img: "images/productos/catA/a3/cover.png",
-    img1: "images/productos/catA/a3/a1.jpg",
-    img2: "images/productos/catA/a3/a2.jpg",
-    img3: "images/productos/catA/a3/a3.jpg",
-  },
-  {
-    id: "a4",
-    name: "Brillos labiales Victoria's Secret",
-    price: 10000,
-    desc: "Brllo labial",
-    img: "images/productos/catA/a4/cover.png",
-    img1: "images/productos/catA/a4/a1.jpg",
-    img2: "images/productos/catA/a4/a2.jpg",
-    img3: "images/productos/catA/a4/a3.jpg",
-  },
-  {
-    id: "a5",
-    name: "Mini Splash",
-    price: 7000,
-    desc: "Mini Splash dear body",
-    img: "images/productos/catA/a5/cover.png",
-    img1: "images/productos/catA/a5/a1.jpg",
-  },
-  {
-    id: "a6",
-    name: "Mini Splash + Brllo",
-    price: 15000,
-    desc: "Mini Splash y Brllo labial con efecto volumen",
-    img: "images/productos/catA/a6/cover.png",
-    img1: "images/productos/catA/a6/a1.jpg",
-    img2: "images/productos/catA/a6/a2.jpg",
-    img3: "images/productos/catA/a6/a3.jpg",
-  },
-  {
-    id: "a7",
-    name: "Splash Victoria's Secret",
-    price: 20000,
-    desc: "Splash Victoria's Secret 250ml",
-    img: "images/productos/catA/a7/cover.png",
-    img1: "images/productos/catA/a7/a1.jpg",
-    img2: "images/productos/catA/a7/a2.jpg",
-    img3: "images/productos/catA/a7/a3.jpg",
-  },
-  {
-    id: "a8",
-    name: "Crema Victoria's Secret",
-    price: 25000,
-    desc: "Crema Victoria's Secret 200ml",
-    img: "images/productos/catA/a8/cover1.png",
-    img1: "images/productos/catA/a8/a1.jpg",
-    img2: "images/productos/catA/a8/a2.jpg",
-    img3: "images/productos/catA/a8/a3.jpg",
+    nombre: "Azucar",
+    cantidad: 10,
+    unidad: "Kg",
+    img: "https://res.cloudinary.com/cloudinarymercamio/image/upload/dpr_auto,q_50,f_jpg,w_auto/007997",
   },
 ];
-//Ropero
-let nameCatB = "Clau Fashion";
+//Verduras y Fruta
+let nameCatB = "Verduras y Frutas";
 let catB = [
   {
     id: "b1",
@@ -96,8 +39,8 @@ let catB = [
     img3: "images/productos/catB/b1/b3.jpg",
   },
 ];
-//Segunda Oportunidad
-let nameCatC = "Second Change";
+//Aseo
+let nameCatC = "Aseo";
 let catC = [
   {
     id: "c1",
@@ -119,14 +62,14 @@ let catC = [
   },
 ];
 
-catA.forEach((planta) => {
-  shopItemsData.push(planta);
+catA.forEach((producto) => {
+  shopItemsData.push(producto);
 });
-catB.forEach((planta) => {
-  shopItemsData.push(planta);
+catB.forEach((producto) => {
+  shopItemsData.push(producto);
 });
-catC.forEach((planta) => {
-  shopItemsData.push(planta);
+catC.forEach((producto) => {
+  shopItemsData.push(producto);
 });
 
 

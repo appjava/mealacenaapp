@@ -1,0 +1,1 @@
+document.getElementById("nameCatA").innerHTML = nameCatA;
