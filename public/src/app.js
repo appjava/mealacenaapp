@@ -2,13 +2,13 @@ document.getElementById("nameCatA").innerHTML = nameCatA;
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-let ShoppingCart = document.getElementById("alacena");
+let alacena = document.getElementById("alacena");
 
-let generateCartItems = () => {
+let generateProducts = () => {
   
     if (basket.length !== 0) {
       
-      return (ShoppingCart.innerHTML = basket.map((x) => {
+      return (alacena.innerHTML = basket.map((x) => {
           
           let { id } = x;
           let search = shopItemsData.find((y) => y.id === id) || [];
@@ -32,11 +32,11 @@ let generateCartItems = () => {
         .join(""));
     } else {
       
-      ShoppingCart.innerHTML = `<h3>Alacena Vacia</h3>`;
+      alacena.innerHTML = `<h3>Alacena Vacia</h3>`;
     }
   };
   
-generateCartItems();
+generateProducts();
 
 let increment = (id) => {
     let selectedItem = id;
@@ -51,7 +51,7 @@ let increment = (id) => {
       search.item += 1;
     }
   
-    generateCartItems();
+    generateProducts();
     update(selectedItem.id);
     localStorage.setItem("data", JSON.stringify(basket));
   };
@@ -66,7 +66,7 @@ let increment = (id) => {
     }
     update(selectedItem.id);
     basket = basket.filter((x) => x.item !== 0);
-    generateCartItems();
+    generateProducts();
     
     localStorage.setItem("data", JSON.stringify(basket));
   };
