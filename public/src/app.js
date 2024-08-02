@@ -5,27 +5,18 @@
 document.getElementById("nameCatA").innerHTML = nameCatA;
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
-<<<<<<< HEAD
 /*
 shopItemsData.forEach((producto) => {
   basket.push(producto);
 });
 */
 let ShoppingCart = document.getElementById("alacena");
-=======
-
-let alacena = document.getElementById("alacena");
->>>>>>> a53e80004256d8563334b588b9828ab37941cc34
 
 let generateProducts = () => {
   
     if (shopItemsData.length !== 0) {
       
-<<<<<<< HEAD
       return (ShoppingCart.innerHTML = shopItemsData.map((x) => {
-=======
-      return (alacena.innerHTML = basket.map((x) => {
->>>>>>> a53e80004256d8563334b588b9828ab37941cc34
           
           let { id } = x;
           let search = shopItemsData.find((y) => y.id === id) || [];
