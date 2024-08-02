@@ -5,18 +5,27 @@
 document.getElementById("nameCatA").innerHTML = nameCatA;
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
+<<<<<<< HEAD
 /*
 shopItemsData.forEach((producto) => {
   basket.push(producto);
 });
 */
 let ShoppingCart = document.getElementById("alacena");
+=======
 
-let generateCartItems = () => {
+let alacena = document.getElementById("alacena");
+>>>>>>> a53e80004256d8563334b588b9828ab37941cc34
+
+let generateProducts = () => {
   
     if (shopItemsData.length !== 0) {
       
+<<<<<<< HEAD
       return (ShoppingCart.innerHTML = shopItemsData.map((x) => {
+=======
+      return (alacena.innerHTML = basket.map((x) => {
+>>>>>>> a53e80004256d8563334b588b9828ab37941cc34
           
           let { id } = x;
           let search = shopItemsData.find((y) => y.id === id) || [];
@@ -40,11 +49,11 @@ let generateCartItems = () => {
         .join(""));
     } else {
       
-      ShoppingCart.innerHTML = `<h3>Alacena Vacia</h3>`;
+      alacena.innerHTML = `<h3>Alacena Vacia</h3>`;
     }
   };
   
-generateCartItems();
+generateProducts();
 
 let increment = (id) => {
     let selectedItem = id;
@@ -52,7 +61,7 @@ let increment = (id) => {
     search.cantidad += 1;
 
   
-    generateCartItems();
+    generateProducts();
     update(selectedItem.id);
     localStorage.setItem("data", JSON.stringify(basket));
   };
@@ -67,7 +76,7 @@ let increment = (id) => {
     }
     update(selectedItem.id);
     basket = basket.filter((x) => x.item !== 0);
-    generateCartItems();
+    generateProducts();
     
     localStorage.setItem("data", JSON.stringify(basket));
   };
