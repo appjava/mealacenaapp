@@ -1,29 +1,51 @@
-
 let shopItemsData = [];
+
 //Base
 let nameCatA = "Grano Básico";
 let catA = [
   {
     id: "a1",
-    nombre: "Cafe",
-    cantidad: 4,
+    nombre: "cafe",
+    cantidad: "?",
     unidad: "Lb",
     img: "https://stockimages.tiendasd1.com/stockimages.tiendasd1.com/kobastockimages/IMAGENES/12000184.png",
   },
   {
     id: "a2",
-    nombre: "Aceite",
-    cantidad: 4,
+    nombre: "aceite",
+    cantidad: "?",
     unidad: "Lt",
     img: "https://stockimages.tiendasd1.com/stockimages.tiendasd1.com/kobastockimages/IMAGENES/12004357.png",
   },
   {
     id: "a3",
-    nombre: "Azucar",
-    cantidad: 10,
+    nombre: "azucar",
+    cantidad: "?",
     unidad: "Kg",
     img: "https://res.cloudinary.com/cloudinarymercamio/image/upload/dpr_auto,q_50,f_jpg,w_auto/007997",
   },
+  {
+    id: "a4",
+    nombre: "arroz",
+    cantidad: "?",
+    unidad: "Lb",
+    img: "https://res.cloudinary.com/cloudinarymercamio/image/upload/dpr_auto,q_50,f_jpg,w_auto/031282",
+  },
+  {
+    id: "a5",
+    nombre: "sal",
+    cantidad: "?",
+    unidad: "Kg",
+    img: "https://waco-agency-saas-repository.s3.amazonaws.com/MM_PROD/products/029166.jpg",
+  },
+  {
+    id: "a6",
+    nombre: "harina",
+    cantidad: "?",
+    unidad: "Lb",
+    img: "https://waco-agency-saas-repository.s3.amazonaws.com/MM_PROD/products/051011.jpg",
+  },
+
 ];
 //Verduras y Fruta
 let nameCatB = "Verduras y Frutas";
@@ -65,6 +87,29 @@ let catC = [
 catA.forEach((producto) => {
   shopItemsData.push(producto);
 });
+
+
+fetch('https://echoprojects3d-default-rtdb.firebaseio.com/alacena.json')
+            .then(response => response.json())
+            .then(data => {
+              console.log(data)
+              let aceite = data.aceite;
+              let azucar = data.azucar;
+              let cafe = data.cafe;
+              let sal = data.sal;
+              let arroz = data.arroz;
+              let harina = data.harina;
+              
+              document.getElementById("aceite").innerHTML = aceite;
+              document.getElementById("azucar").innerHTML = azucar;
+              document.getElementById("cafe").innerHTML = cafe;
+              document.getElementById("sal").innerHTML = sal;
+              document.getElementById("harina").innerHTML = harina;
+              document.getElementById("arroz").innerHTML = arroz;
+              
+            });
+
+
 /*
 catB.forEach((producto) => {
   shopItemsData.push(producto);

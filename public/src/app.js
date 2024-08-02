@@ -1,14 +1,22 @@
+
+
+
+
 document.getElementById("nameCatA").innerHTML = nameCatA;
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
-
+/*
+shopItemsData.forEach((producto) => {
+  basket.push(producto);
+});
+*/
 let ShoppingCart = document.getElementById("alacena");
 
 let generateCartItems = () => {
   
-    if (basket.length !== 0) {
+    if (shopItemsData.length !== 0) {
       
-      return (ShoppingCart.innerHTML = basket.map((x) => {
+      return (ShoppingCart.innerHTML = shopItemsData.map((x) => {
           
           let { id } = x;
           let search = shopItemsData.find((y) => y.id === id) || [];
@@ -19,7 +27,7 @@ let generateCartItems = () => {
                 <div class="inventario">
                     <div class="actual">
                     <span id="decremento" onclick="decrement(${id})">-</span>
-                    <h3 id="cantidad">${search.cantidad}</h3>
+                    <h3 id=${search.nombre}>${search.cantidad}</h3>
                     <span id="incremento" onclick="increment(${id})">+</span>
                     </div>
                 </div>
@@ -41,15 +49,8 @@ generateCartItems();
 let increment = (id) => {
     let selectedItem = id;
     let search = basket.find((x) => x.id === selectedItem.id);
-  
-    if (search === undefined) {
-      basket.push({
-        id: selectedItem.id,
-        item: 1,
-      });
-    } else {
-      search.item += 1;
-    }
+    search.cantidad += 1;
+
   
     generateCartItems();
     update(selectedItem.id);
@@ -74,6 +75,6 @@ let increment = (id) => {
   let update = (id) => {
     let search = basket.find((x) => x.id === id);
     // console.log(search.item);
-    document.getElementById(id).innerHTML = search.item;
+    document.getElementById(id).innerHTML = search.cantidad;
   };
   
